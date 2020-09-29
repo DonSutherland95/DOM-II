@@ -67,9 +67,16 @@ img.addEventListener("drag", (event) => {
     "https://lh3.googleusercontent.com/proxy/zsEHTd6YNZYK9fIbwHgxMJYxxMK_1KDYNopK91D8oLi67cBWt9rT9d6W55O0s4WC16cg7yshIIZrw6NnWGfKcf-FwOCbJkyrpl5n9JM";
 });
 
-//
+// stop propagation
+firstImg.addEventListener("click", (e) => e.stopPropagation());
+document.body.addEventListener("click", listener);
 
-console.log(propogation[0]);
+function listener(event) {
+  console.log(
+    `event passing thru ${event.currentTarget.nodeName} target --> ${event.target.nodeName}`
+  );
+}
+// prevent default
 document.querySelectorAll("a").forEach((link) =>
   link.addEventListener("click", (event) => {
     event.preventDefault();
