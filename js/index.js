@@ -66,3 +66,12 @@ img.addEventListener("drag", (event) => {
   img.src =
     "https://lh3.googleusercontent.com/proxy/zsEHTd6YNZYK9fIbwHgxMJYxxMK_1KDYNopK91D8oLi67cBWt9rT9d6W55O0s4WC16cg7yshIIZrw6NnWGfKcf-FwOCbJkyrpl5n9JM";
 });
+
+//
+
+console.log(propogation[0]);
+document.querySelectorAll("a").forEach((link) =>
+  link.addEventListener("click", (event) => {
+    event.preventDefault();
+  })
+);
