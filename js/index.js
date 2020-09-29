@@ -12,14 +12,39 @@ navLinks.addEventListener("mouseover", function (event) {
 // 2
 let container = document.querySelector(".home");
 window.addEventListener("scroll", function (event) {
-  container.style.backgroundColor = "#C0C0C0";
+  container.style.backgroundColor = "#87CEFA";
 });
-// container.addEventListener("scroll", function (event) {
-//   event.style.backgroundColor = "#C0C0C0";
-// });
 
 // 3
 let firstImg = document.querySelector(".img-content");
 firstImg.addEventListener("click", function (event) {
-  event.target.style.transform = scale(1.5);
+  //   firstImg.style.transform = "scale(1.2)";
+  firstImg.style.filter = "grayscale(100%)";
+
+  //   setTimeout(function () {
+  //     firstImg.style.filter = "grayscale(0%)";
+  //   }, 1000);
 });
+
+// 4
+let navbar = document.querySelector(".main-navigation");
+let footer = document.querySelector(".footer");
+window.addEventListener("resize", function () {
+  navbar.style.backgroundColor = "#CD5C5C";
+  footer.style.backgroundColor = "#CD5C5C";
+});
+
+// 5
+let secondImg = document.querySelector(".inverse-content .img-content");
+secondImg.addEventListener("mousedown", () => {
+  secondImg.style.filter = "invert(100%)";
+});
+
+// 6
+let thirdImg = document.querySelector(".content-destination img");
+thirdImg.addEventListener("dblclick", () => {
+  thirdImg.style.filter = "brightness(150%)";
+});
+// console.log(thirdImg);
+
+// 7
